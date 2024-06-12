@@ -9,8 +9,9 @@ pipeline {
     stages {
       stage('Audit tools') {
         steps {
-        export PATH=$PATH:$MAVEN_HOME/bin
+        
           sh '''
+              export PATH=$PATH:$MAVEN_HOME/bin
               git version
               java -version
               mvn -version
